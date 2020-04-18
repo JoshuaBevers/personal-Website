@@ -39,11 +39,9 @@ class home extends Component {
             </Link>
           </div>
         </div>
-
         <div className="middleHeader">
           <div>
-            A collection of the languages and skills I've picked up along the
-            way
+            Maybe the skills are the friends I've found along the way?
             <div>
               <img className="picList" src={python} alt="python"></img>
               <img className="picList" src={node} alt=""></img>
@@ -56,7 +54,6 @@ class home extends Component {
             </div>
           </div>
         </div>
-
         <div className="homeHeader">
           <div className="margin-bottom">My projects.</div>
           <div>

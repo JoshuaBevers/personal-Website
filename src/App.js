@@ -6,6 +6,9 @@ import "./App.css";
 import Home from "./components/home";
 import About from "./components/about";
 import Resume from "./components/resume";
+import inProgress from "./components/inprogress";
+import Complete from "./components/complete";
+import NotFound from "./components/404notfound";
 
 function App() {
   return (
@@ -14,6 +17,9 @@ function App() {
         {<Route exact path="/" component={Home} />}
         {<Route exact path="/about" component={About} />}
         {<Route exact path="/resume" component={Resume} />}
+        {<Route exact path="/inprogress" component={inProgress} />}
+        {<Route exact path="/complete" component={Complete} />}
+        {<Route path="/" component={NotFound} />}
       </div>
     </Router>
   );
