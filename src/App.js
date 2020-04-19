@@ -17,9 +17,9 @@ function App() {
         {<Route exact path="/" component={Home} />}
         {<Route exact path="/about" component={About} />}
         {<Route exact path="/resume" component={Resume} />}
-        {<Route exact path="/inprogress" component={inProgress} />}
-        {<Route exact path="/complete" component={Complete} />}
-        {<Route path="/" component={NotFound} />}
+        {<Route exact path="/in-progress" component={inProgress} />}
+        {<Route exact path="/completed" component={Complete} />}
+        {<Route path="/404" component={NotFound} />}
       </div>
     </Router>
   );

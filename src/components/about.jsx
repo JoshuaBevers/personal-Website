@@ -11,11 +11,12 @@ class about extends Component {
   componentDidMount() {
     document.title = "About Me";
   }
+
   render() {
     return (
       <div>
         <div>
-          <p className="centered">My personality and interests</p>
+          <p className="centered">What I'm About</p>
         </div>
 
         <div className="interests">

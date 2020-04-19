@@ -5,7 +5,7 @@ import React from "react";
 function Complete() {
   return (
     <div className="interests">
-      <div>This is a redone</div>
+      <div>This is redone</div>
     </div>
   );
 }

@@ -5,7 +5,7 @@ import React from "react";
 function Resume() {
   return (
     <div className="interests">
-      <div>This is a redone</div>
+      <div>This is my resume page! I have it coming! Be prepared!</div>
     </div>
   );
 }
