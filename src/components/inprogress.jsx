@@ -1,6 +1,6 @@
-import React from "react";
-import styled from "styled-components";
+import React, { useEffect } from "react";
 import TitlePic from "../images/renovation.webp";
+import styled from "styled-components";
 
 //doc import
 
@@ -24,7 +24,11 @@ const TitleText = styled.p`
   font-family: fantasy;
 `;
 
-function inProgress() {
+function InProgress() {
+  useEffect(() => {
+    document.title = "In Progress";
+  }, []);
+
   return (
     <div className="container">
       <TitlePicture src={TitlePic} alt="" />
@@ -40,4 +44,4 @@ function inProgress() {
   );
 }
 
-export default inProgress;
+export default InProgress;
