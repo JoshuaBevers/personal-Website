@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import './home.css';
 import logo from '../logo.svg';
-import '../index.css';
 
 //images
 import python from '../images/python-logo.jpg';

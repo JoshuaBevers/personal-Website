@@ -5,18 +5,20 @@ import styled from 'styled-components';
 import Placeholder from '../images/BH.png';
 
 const Title = styled.p`
+  margin-top: 0px;
+  margin-bottom: 0px;
   font-size: 60px;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
     'Lucida Sans', Arial, sans-serif;
 `;
 
 const ProjectTitle = styled.p`
-  position: fixed;
+  position: absolute;
   font-size: 30px;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
     'Lucida Sans', Arial, sans-serif;
   left: 45%;
-  margin-top: -15px;
+  margin-top: 10px;
 `;
 
 const ProjectText = styled.p`
@@ -29,9 +31,9 @@ const Completed = styled.div`
   height: 100vh;
 `;
 
-const DisplayBlack = styled.p`
+const DisplayBlack = styled.div`
   display: flex;
-  margin-bottom: -15px;
+  margin-bottom: 20px;
   font-size: 25px;
   background-color: black;
   color: white;
@@ -41,8 +43,9 @@ const DisplayBlack = styled.p`
   }
 `;
 
-const DisplayGrey = styled.p`
+const DisplayGrey = styled.div`
   display: flex;
+  margin-bottom: 20px;
   font-size: 25px;
   background-color: grey;
   color: white;
@@ -60,8 +63,6 @@ function Complete() {
     document.title = 'Complete';
   });
 
-  //I really need to figure out how I want this displayed. I know I want this on the website, I just don't know
-  //How it would be best to display it graphically.
   return (
     <Completed>
       <Title>Completed projects</Title>
@@ -75,6 +76,11 @@ function Complete() {
         <ProjectText>This is where the text description goes!</ProjectText>
         <img src={Placeholder} alt=''></img>
       </DisplayGrey>
+      <DisplayBlack>
+        <img src={Placeholder} alt=''></img>
+        <ProjectTitle>Project Name</ProjectTitle>
+        <ProjectText>This is where the text description goes!</ProjectText>
+      </DisplayBlack>
     </Completed>
   );
 }
