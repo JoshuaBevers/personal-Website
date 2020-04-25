@@ -1,33 +1,46 @@
 //react and components
 import React, { Component } from "react";
-import "./about.css";
 import styled from "styled-components";
+import "./about.css";
 
 //images
 import github from "../images/github.png";
 import mailbox from "../images/mailbox.png";
 import linkedin from "../images/linkedin.png";
+import Headshot from "../images/headshot.jpg"
 
 class about extends Component {
   componentDidMount() {
     document.title = "About Me";
   }
 
+
+
   render() {
+
+    const Intro = styled.p`
+    font-size: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    `;
+
+    const IntroBody = styled.p`
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    `;
+
     return (
       <div>
         <div>
           <p className="centered">What I'm About</p>
         </div>
-        <div className="interests">
-          <p>
-            Okay. One paragraph. Let's do this.<strong> *Deep Breath*</strong>
-            <br />
-            <strong>
-              Born in 1782 under an evil star, I quickly began rallying the
-              forces of darkness to my command.
+
+        <Intro>  Okay.<strong> *Deep Breath*</strong></Intro>
+        <br />
+        <IntroBody>
+          <strong>
+            Born in 1782 under an evil star, I quickly began rallying the
+            forces of darkness to my command.
             </strong>
-            <br />
+          <br />
             Wait... no. That's wrong.
             <br />
             Born in 1991, I've spent the majority of my life in the
@@ -39,14 +52,15 @@ class about extends Component {
             computer at eleven with my father. I tinkered with programming,
             building small programs in various languages to either play
             pranks(play "closing time" through the small shop's speakers I
-            worked at during...well... closing time). In 2019 I decided I wanted
+            worked at during...well... closing time). In 2018 I decided I wanted
             to make a career of it and saved to sign up for Digital Crafts, a
             bootcamp I joined at the start of 2020.
-          </p>
-        </div>
-        {/* This next bar below will eventually be dropped down and replaced with pictures. Once I actually take some of me >.< I hate pictures of me. */}
+            </IntroBody>
+
+
         <div className="socials">
           <p>The Socials</p>
+          <img className="headshot" src={Headshot} alt=""></img>
           <a href="mailto: j.bevers404@gmail.com">
             <img className="PicList" src={mailbox} alt=""></img>
           </a>
@@ -58,7 +72,7 @@ class about extends Component {
             <img className="picList" src={linkedin} alt=""></img>
           </a>
         </div>
-      </div>
+      </div >
     );
   }
 }
