@@ -17,11 +17,11 @@ const TitleText = styled.p`
   position: absolute;
   display: flex;
   font-size: 50px;
-  padding-left: 33vw;
-  margin-top: -12vh;
+  top: 1vh;
+  left:30vw;
   color: purple;
-  z-index: 1;
   font-family: fantasy;
+  z-index: 1;
 `;
 
 function InProgress() {
@@ -34,8 +34,9 @@ function InProgress() {
       <TitlePicture src={TitlePic} alt="" />
       <TitleText>In Progress...</TitleText>
       <div>
-        Hello! I'm still working this bit of the personal site out while going
-        through the class!
+        Hello! I'm still working this bit of the my website out while going
+        through the class! So....
+        <br />in progress is currently in progress. Ain't that about a bee.
         <br />
         Be prepared to see my long-term projects as soon as I start developing
         ones worth displaying!
