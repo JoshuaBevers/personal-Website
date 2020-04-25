@@ -5,9 +5,23 @@ import styled from 'styled-components';
 import Placeholder from '../images/BH.png';
 
 const Title = styled.p`
+  font-size: 60px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+    'Lucida Sans', Arial, sans-serif;
+`;
+
+const ProjectTitle = styled.p`
+  position: fixed;
   font-size: 30px;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
     'Lucida Sans', Arial, sans-serif;
+  left: 45%;
+  margin-top: -15px;
+`;
+
+const ProjectText = styled.p`
+  font-size: 20px;
+  margin-top: 50px;
 `;
 
 const Completed = styled.div`
@@ -32,10 +46,12 @@ const DisplayGrey = styled.p`
   font-size: 25px;
   background-color: grey;
   color: white;
+  height: 187px;
 
   img {
-    position: relative;
+    position: absolute;
     width: 250px;
+    right: 0;
   }
 `;
 
@@ -49,13 +65,15 @@ function Complete() {
   return (
     <Completed>
       <Title>Completed projects</Title>
-
       <DisplayBlack>
         <img src={Placeholder} alt=''></img>
-        Hello!
+        <ProjectTitle>Project Name</ProjectTitle>
+        <ProjectText>This is where the text description goes!</ProjectText>
       </DisplayBlack>
       <DisplayGrey>
-        Hello!<img src={Placeholder} alt=''></img>
+        <ProjectTitle>Project Name</ProjectTitle>
+        <ProjectText>This is where the text description goes!</ProjectText>
+        <img src={Placeholder} alt=''></img>
       </DisplayGrey>
     </Completed>
   );
