@@ -14,17 +14,24 @@ class about extends Component {
     document.title = "About Me";
   }
 
-
-
   render() {
 
     const Intro = styled.p`
-    font-size: 20px;
+    font-size: 25px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     `;
 
     const IntroBody = styled.p`
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 20px;
+    align-content: center;
+    margin-left: 5vw;
+    margin-right: 5vw;
+
+     strong {
+       font-size: 24px;
+       font-family:  Tahoma;
+     }
     `;
 
     return (
@@ -41,8 +48,10 @@ class about extends Component {
             forces of darkness to my command.
             </strong>
           <br />
+          <br />
             Wait... no. That's wrong.
             <br />
+          <br />
             Born in 1991, I've spent the majority of my life in the
             contentential United States. I enjoy Martial arts, relaxing tea, and
             solving problems. I hike, play video games, and occasionally play a
