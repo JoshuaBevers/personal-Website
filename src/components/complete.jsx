@@ -112,6 +112,18 @@ function Complete() {
           </a>
         </ProjectText>
       </DisplayBlack>
+      <DisplayGrey>
+        <ProjectTitle>...AND THIS SITE!</ProjectTitle>
+        <ProjectText>
+          This will be on ongoing project as I hone my craft to improve this
+          website and keep it updated with my projects!
+          <br />
+          <a href='https://github.com/JoshuaBevers/JoshuaBevers.github.io'>
+            It is me!
+          </a>
+        </ProjectText>
+        <img src={Placeholder} alt=''></img>
+      </DisplayGrey>
     </Completed>
   );
 }
