@@ -1,5 +1,6 @@
 import React from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import styled from 'styled-components';
 import './App.css';
 
 //components
@@ -10,9 +11,43 @@ import inProgress from './components/inprogress';
 import Complete from './components/complete';
 import NotFound from './components/404notfound';
 
+//styled
+
+const Navbar = styled.nav`
+  width: 100vw;
+  top: 0px;
+  position: absolute;
+  background: transparent;
+  text-align: right;
+  height: 35px;
+  font-size: 25px;
+  color: orange;
+`;
+
+const NavButton = styled.button`
+  transition: all 0.1s linear;
+  border: 1px solid #e1a87a;
+  padding: 13px 26px;
+  background-color: transparent;
+  margin-right: 20px;
+  color: white;
+  font-size: 15px;
+`;
+
 function App() {
   return (
     <Router>
+      <Navbar>
+        <Link to='/completed'>
+          <NavButton>Completed Projects</NavButton>
+        </Link>
+        <Link to='/in-progress'>
+          <NavButton>In Progress</NavButton>
+        </Link>
+        <Link to='/about'>
+          <NavButton>About Me</NavButton>
+        </Link>
+      </Navbar>
       <div className='App'>
         {<Route exact path='/' component={Home} />}
         {<Route exact path='/about' component={About} />}

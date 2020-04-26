@@ -1,47 +1,127 @@
-import React, { useEffect } from "react";
-import TitlePic from "../images/renovation.webp";
-import styled from "styled-components";
+import React, { useEffect } from 'react';
+import styled from 'styled-components';
 
-//doc import
+//img import
+import Placeholder from '../images/BH.png';
 
-const TitlePicture = styled.img`
-  display: flex;
-  padding-left: 20vw;
-  margin-top: -10vh;
-  width: 600px;
-  position: relative;
-  text-align: center;
+const Title = styled.p`
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-size: 60px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+    'Lucida Sans', Arial, sans-serif;
+  color: orange;
 `;
 
-const TitleText = styled.p`
+const ProjectTitle = styled.p`
   position: absolute;
+  font-size: 30px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+    'Lucida Sans', Arial, sans-serif;
+  left: 45%;
+  margin-top: 10px;
+  color: orange;
+`;
+
+const ProjectText = styled.p`
+  font-size: 21px;
+  margin-top: 50px;
+  margin-left: 25px;
+  margin-right: 25px;
+`;
+
+const Completed = styled.div`
+  /* background: rgb(62, 180, 137); */
+  background: black;
+  height: 100vh;
+`;
+
+const DisplayBlack = styled.div`
   display: flex;
-  font-size: 50px;
-  top: 1vh;
-  left:30vw;
-  color: purple;
-  font-family: fantasy;
-  z-index: 1;
+  margin-bottom: 20px;
+  font-size: 25px;
+  background-color: grey;
+  color: orange;
+
+  img {
+    width: 250px;
+  }
+`;
+
+const DisplayGrey = styled.div`
+  display: flex;
+  margin-bottom: 20px;
+  font-size: 25px;
+  background-color: white;
+  color: orange;
+  height: 187px;
+
+  img {
+    position: absolute;
+    width: 250px;
+    right: 0;
+  }
 `;
 
 function InProgress() {
   useEffect(() => {
-    document.title = "In Progress";
+    document.title = 'In Progress';
   }, []);
 
   return (
-    <div className="container">
-      <TitlePicture src={TitlePic} alt="" />
-      <TitleText>In Progress...</TitleText>
-      <div>
-        Hello! I'm still working this bit of the my website out while going
-        through the class! So....
-        <br />in progress is currently in progress. Ain't that about a bee.
-        <br />
-        Be prepared to see my long-term projects as soon as I start developing
-        ones worth displaying!
-      </div>
-    </div>
+    <Completed>
+      <Title>In Progress Projects</Title>
+      <DisplayBlack>
+        <img src={Placeholder} alt=''></img>
+        <ProjectTitle>RPG Sampler</ProjectTitle>
+        <ProjectText>
+          A learning typescript RPG skeleton that I'm putting together.
+          Temperarily on told as I go through Digital Crafts course.
+          <br />
+          <a href='https://github.com/JoshuaBevers/Game'>See the Matrix</a>
+        </ProjectText>
+      </DisplayBlack>
+      <DisplayGrey>
+        <ProjectTitle>DC solo-react project</ProjectTitle>
+        <ProjectText>
+          A quick front-end project that uses context. I built a small
+          motivational, quest-based game. I feel that there can be
+          <br />
+          more to be mined from this project later, but is closed for now while
+          I finish this course.
+          <br />
+          <a href='https://github.com/JoshuaBevers/React-Solo-Frontend'>
+            The secret is in the sause.
+          </a>
+        </ProjectText>
+        <img src={Placeholder} alt=''></img>
+      </DisplayGrey>
+      <DisplayBlack>
+        <img src={Placeholder} alt=''></img>
+        <ProjectTitle>Pandemic Georgia</ProjectTitle>
+        <ProjectText>
+          This game was made during a time where Covid wasn't....what it is now.
+          Modeling on a basic form of the boardgame 'pandemic', this deals
+          specifically with the containment and spread in georgia.
+          <br />
+          <a href='https://github.com/JoshuaBevers/pandemic-georgia'>
+            Decode the Epidemic
+          </a>
+        </ProjectText>
+      </DisplayBlack>
+      <DisplayGrey>
+        <ProjectTitle>...AND THIS SITE!</ProjectTitle>
+        <ProjectText>
+          This will be on ongoing project as I hone my craft to improve this
+          website and keep it updated with my projects!
+          <br />
+          <a href='https://github.com/JoshuaBevers/JoshuaBevers.github.io'>
+            It is me!
+          </a>
+        </ProjectText>
+        <img src={Placeholder} alt=''></img>
+      </DisplayGrey>
+    </Completed>
   );
 }
 
