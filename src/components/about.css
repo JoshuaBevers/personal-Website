@@ -40,3 +40,18 @@
   bottom: 0;
   left: 5vw;
 }
+
+@media only screen and (max-width: 600px) {
+  .picList {
+    margin-top: 15px;
+    width: 100px;
+    margin-left: 20px;
+    margin-right: 10px;
+  }
+  .headshot {
+    position: relative;
+    width: 120px;
+    bottom: 0;
+    left: 5vw;
+  }
+}

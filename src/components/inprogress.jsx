@@ -28,6 +28,11 @@ const ProjectText = styled.p`
   margin-top: 50px;
   margin-left: 25px;
   margin-right: 25px;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    padding-top: 70px;
+  }
 `;
 
 const Completed = styled.div`
@@ -42,9 +47,16 @@ const DisplayBlack = styled.div`
   font-size: 25px;
   background-color: grey;
   color: orange;
+  height: 100vh;
 
   img {
     width: 250px;
+  }
+  @media (max-width: 768px) {
+    flex-direction: column;
+    img {
+      width: 150px;
+    }
   }
 `;
 
@@ -60,6 +72,14 @@ const DisplayGrey = styled.div`
     position: absolute;
     width: 250px;
     right: 0;
+  }
+  @media (max-width: 768px) {
+    flex-direction: column;
+    height: 100vh;
+    img {
+      width: 150px;
+      left: 0px;
+    }
   }
 `;
 

@@ -28,10 +28,14 @@ const ProjectText = styled.p`
   margin-top: 50px;
   margin-left: 25px;
   margin-right: 25px;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    padding-top: 70px;
+  }
 `;
 
 const Completed = styled.div`
-  /* background: rgb(62, 180, 137); */
   background: black;
   height: 100vh;
 `;
@@ -40,15 +44,22 @@ const DisplayBlack = styled.div`
   display: flex;
   margin-bottom: 20px;
   font-size: 25px;
-  background-color: grey;
+  background-color: Grey;
   color: orange;
 
   img {
     width: 250px;
   }
+  @media (max-width: 768px) {
+    flex-direction: column;
+    height: 100vh;
+    img {
+      width: 150px;
+    }
+  }
 `;
 
-const DisplayGrey = styled.div`
+const DisplayWhite = styled.div`
   display: flex;
   margin-bottom: 20px;
   font-size: 25px;
@@ -57,9 +68,18 @@ const DisplayGrey = styled.div`
   height: 187px;
 
   img {
-    position: absolute;
     width: 250px;
     right: 0;
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    height: 100vh;
+
+    img {
+      width: 150px;
+      left: 0px;
+    }
   }
 `;
 
@@ -85,7 +105,8 @@ function Complete() {
           </a>
         </ProjectText>
       </DisplayBlack>
-      <DisplayGrey>
+      <DisplayWhite>
+        <img src={Placeholder} alt=''></img>
         <ProjectTitle>DC solo-react project</ProjectTitle>
         <ProjectText>
           A quick front-end project that uses context. I built a small
@@ -97,8 +118,7 @@ function Complete() {
             The secret is in the sause.
           </a>
         </ProjectText>
-        <img src={Placeholder} alt=''></img>
-      </DisplayGrey>
+      </DisplayWhite>
       <DisplayBlack>
         <img src={Placeholder} alt=''></img>
         <ProjectTitle>Pandemic Georgia</ProjectTitle>
@@ -112,7 +132,8 @@ function Complete() {
           </a>
         </ProjectText>
       </DisplayBlack>
-      <DisplayGrey>
+      <DisplayWhite>
+        <img src={Placeholder} alt=''></img>
         <ProjectTitle>...AND THIS SITE!</ProjectTitle>
         <ProjectText>
           This will be on ongoing project as I hone my craft to improve this
@@ -122,8 +143,7 @@ function Complete() {
             It is me!
           </a>
         </ProjectText>
-        <img src={Placeholder} alt=''></img>
-      </DisplayGrey>
+      </DisplayWhite>
     </Completed>
   );
 }

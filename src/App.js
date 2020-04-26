@@ -14,14 +14,17 @@ import NotFound from './components/404notfound';
 //styled
 
 const Navbar = styled.nav`
+  display: flex;
   width: 100vw;
   top: 1vh;
-  position: fixed;
-  background: transparent;
+  background: black;
   text-align: right;
-  height: 35px;
+  height: 94px;
   font-size: 25px;
+  justify-content: center;
   color: orange;
+  /* flex-direction: column; */
+  flex-wrap: wrap;
 `;
 
 const NavButton = styled.button`
@@ -29,8 +32,8 @@ const NavButton = styled.button`
   border: 1px solid #e1a87a;
   padding: 13px 26px;
   background-color: black;
-  margin-right: 20px;
   color: orange;
+  margin-right: 5px;
   font-size: 15px;
 `;
 
