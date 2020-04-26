@@ -15,8 +15,8 @@ import NotFound from './components/404notfound';
 
 const Navbar = styled.nav`
   width: 100vw;
-  top: 0px;
-  position: absolute;
+  top: 1vh;
+  position: fixed;
   background: transparent;
   text-align: right;
   height: 35px;
@@ -28,9 +28,9 @@ const NavButton = styled.button`
   transition: all 0.1s linear;
   border: 1px solid #e1a87a;
   padding: 13px 26px;
-  background-color: transparent;
+  background-color: black;
   margin-right: 20px;
-  color: white;
+  color: orange;
   font-size: 15px;
 `;
 
@@ -46,6 +46,9 @@ function App() {
         </Link>
         <Link to='/about'>
           <NavButton>About Me</NavButton>
+        </Link>
+        <Link to='/'>
+          <NavButton>Home</NavButton>
         </Link>
       </Navbar>
       <div className='App'>
