@@ -41,7 +41,6 @@ class about extends Component {
           <p className='centered'>What I'm About</p>
         </div>
         <Intro>
-          {' '}
           Okay.<strong> *Deep Breath*</strong>
         </Intro>
         <br />

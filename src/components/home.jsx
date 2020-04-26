@@ -30,9 +30,9 @@ class home extends Component {
           </p>
           <p className='smallHeader'>Please Don't Panic</p>
           <div>
-            <Link to='/resume'>
+            {/* <Link to='/resume'>
               <button className='openingButton'>Resume</button>
-            </Link>
+            </Link> */}
             <Link to='/about'>
               <button className='openingButton'>About Me</button>
             </Link>
