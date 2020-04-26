@@ -47,13 +47,14 @@ const DisplayBlack = styled.div`
   font-size: 25px;
   background-color: grey;
   color: orange;
-  height: 100vh;
 
   img {
     width: 250px;
   }
+
   @media (max-width: 768px) {
     flex-direction: column;
+    height: 100vh;
     img {
       width: 150px;
     }
