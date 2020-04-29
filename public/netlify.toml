@@ -1,7 +1,0 @@
-[[redirects]]
-  from = "/about"
-  to = "/about"
-  status = 200
-  force = false
-  query = {path = ":path"} # apply this rule for /?path=example
-  conditions = {Role = ["admin"]}
