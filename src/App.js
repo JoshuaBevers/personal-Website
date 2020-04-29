@@ -55,11 +55,11 @@ function App() {
         </Link>
       </Navbar>
       <div className='App'>
-        {<Route exact path='/' component={Home} />}
-        {<Route exact path='/about' component={About} />}
-        {<Route exact path='/resume' component={Resume} />}
-        {<Route exact path='/in-progress' component={inProgress} />}
-        {<Route exact path='/completed' component={Complete} />}
+        {<Route path='/' component={Home} />}
+        {<Route path='/about' component={About} />}
+        {<Route path='/resume' component={Resume} />}
+        {<Route path='/in-progress' component={inProgress} />}
+        {<Route path='/completed' component={Complete} />}
         {<Route path='/404' component={NotFound} />}
       </div>
     </Router>
