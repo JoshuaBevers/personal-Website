@@ -70,7 +70,6 @@ class about extends Component {
 
         <div className='socials'>
           <p>The Socials</p>
-          <img className='headshot' src={Headshot} alt=''></img>
           <a href='mailto: j.bevers404@gmail.com'>
             <img className='PicList' src={mailbox} alt=''></img>
           </a>

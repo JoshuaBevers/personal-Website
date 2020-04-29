@@ -3,6 +3,7 @@ import styled from 'styled-components';
 
 //img import
 import Placeholder from '../images/BH.png';
+import Drinkcast from "../images/drinkcast.png"
 
 const Title = styled.p`
   margin-top: 0px;
@@ -92,7 +93,7 @@ function Complete() {
     <Completed>
       <Title>Completed projects</Title>
       <DisplayBlack>
-        <img src={Placeholder} alt=''></img>
+        <img src={Drinkcast} alt=''></img>
         <ProjectTitle>DrinkCast</ProjectTitle>
         <ProjectText>
           A video confrencing website that allows users to create/join a room
