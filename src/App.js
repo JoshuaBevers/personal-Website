@@ -23,7 +23,6 @@ const Navbar = styled.nav`
   font-size: 25px;
   justify-content: center;
   color: orange;
-  /* flex-direction: column; */
   flex-wrap: wrap;
 `;
 

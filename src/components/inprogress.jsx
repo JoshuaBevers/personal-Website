@@ -43,6 +43,7 @@ const ProjectText = styled.p`
 const Completed = styled.div`
   background: black;
   height: 100vh;
+  width: calc(100vw - (100vw - 100%));
 `;
 
 const DisplayBlack = styled.div`
