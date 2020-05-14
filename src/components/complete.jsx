@@ -3,11 +3,11 @@ import styled from 'styled-components';
 
 //img import
 import Placeholder from '../images/BH.png';
-import Drinkcast from "../images/drinkcast.png"
+import Drinkcast from '../images/drinkcast.png';
+import Pandemic from '../images/PandemicGA.png';
 
 const Title = styled.p`
   margin-top: 0px;
-  margin-bottom: 0px;
   font-size: 60px;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
     'Lucida Sans', Arial, sans-serif;
@@ -15,23 +15,27 @@ const Title = styled.p`
 `;
 
 const ProjectTitle = styled.p`
-  position: absolute;
+  display: flex;
   font-size: 30px;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
     'Lucida Sans', Arial, sans-serif;
-  left: 45%;
   margin-top: 10px;
   color: orange;
+  margin-bottom: 0px;
+  justify-content: center;
+  margin-left: 250px;
+
+  @media (max-width: 768px) {
+    margin-left: 140px;
+  }
 `;
 
 const ProjectText = styled.p`
   font-size: 21px;
-  margin-top: 50px;
-  margin-left: 25px;
   margin-right: 25px;
+  flex-direction: row;
 
   @media (max-width: 768px) {
-    flex-direction: column;
     padding-top: 70px;
   }
 `;
@@ -44,43 +48,41 @@ const Completed = styled.div`
 const DisplayBlack = styled.div`
   display: flex;
   margin-bottom: 20px;
+  flex-direction: column;
   font-size: 25px;
-  background-color: Grey;
+  background-color: grey;
   color: orange;
 
-  img {
-    width: 250px;
-  }
   @media (max-width: 768px) {
-    flex-direction: column;
-    height: 100vh;
-    img {
-      width: 150px;
-    }
+    padding: 0px;
+    height: 60vh;
   }
 `;
 
 const DisplayWhite = styled.div`
   display: flex;
   margin-bottom: 20px;
+  flex-direction: column;
   font-size: 25px;
   background-color: white;
   color: orange;
-  height: 187px;
-
-  img {
-    width: 250px;
-    right: 0;
-  }
 
   @media (max-width: 768px) {
-    flex-direction: column;
-    height: 100vh;
+    padding: 0px;
+    height: 60vh;
+  }
+`;
 
-    img {
-      width: 150px;
-      left: 0px;
-    }
+const IMG = styled.img`
+  margin-top: -66px;
+  float: left;
+  width: 287px;
+  height: 187px;
+
+  @media (max-width: 768px) {
+    margin-top: -120px;
+    width: 160px;
+    height: 140px;
   }
 `;
 
@@ -91,11 +93,11 @@ function Complete() {
 
   return (
     <Completed>
-      <Title>Completed projects</Title>
+      <Title>Completed Projects</Title>
       <DisplayBlack>
-        <img src={Drinkcast} alt=''></img>
         <ProjectTitle>DrinkCast</ProjectTitle>
         <ProjectText>
+          <IMG src={Drinkcast} alt={Placeholder}></IMG>
           A video confrencing website that allows users to create/join a room
           without having to log in to meet up with friends in a face-to-face
           virtual enviroment to play a few quick games and drink. BYOB,
@@ -106,42 +108,17 @@ function Complete() {
           </a>
         </ProjectText>
       </DisplayBlack>
+
       <DisplayWhite>
-        <img src={Placeholder} alt=''></img>
-        <ProjectTitle>DC solo-react project</ProjectTitle>
-        <ProjectText>
-          A quick front-end project that uses context. I built a small
-          motivational, quest-based game. I feel that there can be more to be
-          mined from this project later, but is closed for now while I finish
-          this course.
-          <br />
-          <a href='https://github.com/JoshuaBevers/React-Solo-Frontend'>
-            The secret is in the sause.
-          </a>
-        </ProjectText>
-      </DisplayWhite>
-      <DisplayBlack>
-        <img src={Placeholder} alt=''></img>
         <ProjectTitle>Pandemic Georgia</ProjectTitle>
         <ProjectText>
+          <IMG src={Pandemic} alt={Placeholder}></IMG>
           This game was made during a time where Covid wasn't....what it is now.
           Modeling on a basic form of the boardgame 'pandemic', this deals
           specifically with the containment and spread in georgia.
           <br />
           <a href='https://github.com/JoshuaBevers/pandemic-georgia'>
             Decode the Epidemic
-          </a>
-        </ProjectText>
-      </DisplayBlack>
-      <DisplayWhite>
-        <img src={Placeholder} alt=''></img>
-        <ProjectTitle>...AND THIS SITE!</ProjectTitle>
-        <ProjectText>
-          This will be on ongoing project as I hone my craft to improve this
-          website and keep it updated with my projects!
-          <br />
-          <a href='https://github.com/JoshuaBevers/JoshuaBevers.github.io'>
-            It is me!
           </a>
         </ProjectText>
       </DisplayWhite>

@@ -3,6 +3,7 @@ import styled from 'styled-components';
 
 //img import
 import Placeholder from '../images/BH.png';
+import DnMe from '../images/DnMe.png';
 
 const Title = styled.p`
   margin-top: 0px;
@@ -14,29 +15,32 @@ const Title = styled.p`
 `;
 
 const ProjectTitle = styled.p`
-  position: absolute;
+  display: flex;
   font-size: 30px;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
     'Lucida Sans', Arial, sans-serif;
-  left: 45%;
   margin-top: 10px;
   color: orange;
+  margin-bottom: 0px;
+  justify-content: center;
+  margin-left: 250px;
+
+  @media (max-width: 768px) {
+    margin-left: 140px;
+  }
 `;
 
 const ProjectText = styled.p`
   font-size: 21px;
-  margin-top: 50px;
-  margin-left: 25px;
   margin-right: 25px;
+  flex-direction: row;
 
   @media (max-width: 768px) {
-    flex-direction: column;
     padding-top: 70px;
   }
 `;
 
 const Completed = styled.div`
-  /* background: rgb(62, 180, 137); */
   background: black;
   height: 100vh;
 `;
@@ -44,43 +48,41 @@ const Completed = styled.div`
 const DisplayBlack = styled.div`
   display: flex;
   margin-bottom: 20px;
+  flex-direction: column;
   font-size: 25px;
   background-color: grey;
   color: orange;
 
-  img {
-    width: 250px;
-  }
-
   @media (max-width: 768px) {
-    flex-direction: column;
-    height: 100vh;
-    img {
-      width: 150px;
-    }
+    padding: 0px;
+    height: 60vh;
   }
 `;
 
 const DisplayGrey = styled.div`
   display: flex;
   margin-bottom: 20px;
+  flex-direction: column;
   font-size: 25px;
   background-color: white;
   color: orange;
+
+  @media (max-width: 768px) {
+    padding: 0px;
+    height: 60vh;
+  }
+`;
+
+const IMG = styled.img`
+  margin-top: -66px;
+  float: left;
+  width: 287px;
   height: 187px;
 
-  img {
-    position: absolute;
-    width: 250px;
-    right: 0;
-  }
   @media (max-width: 768px) {
-    flex-direction: column;
-    height: 100vh;
-    img {
-      width: 150px;
-      left: 0px;
-    }
+    margin-top: -120px;
+    width: 160px;
+    height: 140px;
   }
 `;
 
@@ -93,11 +95,11 @@ function InProgress() {
     <Completed>
       <Title>In Progress Projects</Title>
       <DisplayBlack>
-        <img src={Placeholder} alt=''></img>
         <ProjectTitle>RPG Sampler</ProjectTitle>
         <ProjectText>
+          <IMG src={Placeholder} alt=''></IMG>
           A learning typescript RPG skeleton that I'm putting together.
-          Temperarily on told as I go through Digital Crafts course.
+          Temperarily on hold.
           <br />
           <a href='https://github.com/JoshuaBevers/Game'>See the Matrix</a>
         </ProjectText>
@@ -105,6 +107,7 @@ function InProgress() {
       <DisplayGrey>
         <ProjectTitle>DC solo-react project</ProjectTitle>
         <ProjectText>
+          <IMG src={DnMe} alt={Placeholder}></IMG>
           A quick front-end project that uses context. I built a small
           motivational, quest-based game. I feel that there can be
           <br />
@@ -115,32 +118,6 @@ function InProgress() {
             The secret is in the sause.
           </a>
         </ProjectText>
-        <img src={Placeholder} alt=''></img>
-      </DisplayGrey>
-      <DisplayBlack>
-        <img src={Placeholder} alt=''></img>
-        <ProjectTitle>Pandemic Georgia</ProjectTitle>
-        <ProjectText>
-          This game was made during a time where Covid wasn't....what it is now.
-          Modeling on a basic form of the boardgame 'pandemic', this deals
-          specifically with the containment and spread in georgia.
-          <br />
-          <a href='https://github.com/JoshuaBevers/pandemic-georgia'>
-            Decode the Epidemic
-          </a>
-        </ProjectText>
-      </DisplayBlack>
-      <DisplayGrey>
-        <ProjectTitle>...AND THIS SITE!</ProjectTitle>
-        <ProjectText>
-          This will be on ongoing project as I hone my craft to improve this
-          website and keep it updated with my projects!
-          <br />
-          <a href='https://github.com/JoshuaBevers/JoshuaBevers.github.io'>
-            It is me!
-          </a>
-        </ProjectText>
-        <img src={Placeholder} alt=''></img>
       </DisplayGrey>
     </Completed>
   );
