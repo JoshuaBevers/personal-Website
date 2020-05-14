@@ -15,7 +15,7 @@ import NotFound from './components/404notfound';
 
 const Navbar = styled.nav`
   display: flex;
-  width: 100vw;
+  width: calc(100vw - (100vw - 100%));
   top: 1vh;
   background: black;
   text-align: right;
