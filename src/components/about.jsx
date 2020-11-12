@@ -7,7 +7,6 @@ import './about.css';
 import github from '../images/github.png';
 import mailbox from '../images/mailbox.png';
 import linkedin from '../images/linkedin.png';
-import Headshot from '../images/headshot.jpg';
 
 class about extends Component {
   componentDidMount() {
