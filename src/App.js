@@ -8,7 +8,6 @@ import About from './components/about';
 import Resume from './components/resume';
 import inProgress from './components/inprogress';
 import Complete from './components/complete';
-import NotFound from './components/404notfound';
 
 //styled
 
@@ -58,7 +57,6 @@ function App() {
         {<Route exact path='/resume' component={Resume} />}
         {<Route exact path='/in-progress' component={inProgress} />}
         {<Route exact path='/completed' component={Complete} />}
-        {/* {<Route path='/404' component={NotFound} />} */}
       </>
     </Router>
   );
