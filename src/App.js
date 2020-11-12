@@ -1,7 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import styled from 'styled-components';
-import './App.css';
 
 //components
 import Home from './components/home';
@@ -53,14 +52,14 @@ function App() {
           <NavButton>Home</NavButton>
         </Link>
       </Navbar>
-      <div className='App'>
+      <>
         {<Route exact path='/' component={Home} />}
         {<Route exact path='/about' component={About} />}
         {<Route exact path='/resume' component={Resume} />}
         {<Route exact path='/in-progress' component={inProgress} />}
         {<Route exact path='/completed' component={Complete} />}
         {/* {<Route path='/404' component={NotFound} />} */}
-      </div>
+      </>
     </Router>
   );
 }

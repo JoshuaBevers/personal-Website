@@ -1,5 +1,3 @@
 ## Known issues.
 
-### DNS issues with subdomain. CRL R renders issues.
-
-### chrome and firefox show inconsistent viewings for about and completed projects img.
+This whole thing needs to be redone. I've gained a lot of knowledge since I first made this. The practices used in this strikes me as crude now. I just need to find the time to redo it.

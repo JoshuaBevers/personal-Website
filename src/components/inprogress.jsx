@@ -4,14 +4,17 @@ import styled from 'styled-components';
 //img import
 import Placeholder from '../images/BH.png';
 import DnMe from '../images/DnMe.png';
+import Achieveland from '../images/Achieveland.png';
 
 const Title = styled.p`
+  display: flex;
   margin-top: 0px;
-  margin-bottom: 0px;
+  margin-bottom: 4px;
   font-size: 60px;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
     'Lucida Sans', Arial, sans-serif;
   color: orange;
+  justify-content: center;
 `;
 
 const ProjectTitle = styled.p`
@@ -120,6 +123,16 @@ function InProgress() {
           </a>
         </ProjectText>
       </DisplayGrey>
+      <DisplayBlack>
+        <ProjectTitle>RPG Sampler</ProjectTitle>
+        <ProjectText>
+          <IMG src={Achieveland} alt='My baby project picture has left.'></IMG>
+          My long-term pet project. Allows people to securely log-in, search and
+          claim achievements for board games they've played!
+          <br />
+          <a href='achieveland.net'>Visit the site! Join the crew!</a>
+        </ProjectText>
+      </DisplayBlack>
     </Completed>
   );
 }

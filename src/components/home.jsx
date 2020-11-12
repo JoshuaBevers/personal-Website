@@ -14,6 +14,7 @@ import coding from '../images/coding.webp';
 import chakram from '../images/chakram.webp';
 import html from '../images/html.jpeg';
 import jquery from '../images/Jquery.jpeg';
+import MongoDB from '../images/mongodb.jpeg';
 
 class home extends Component {
   componentDidMount() {
@@ -50,6 +51,7 @@ class home extends Component {
               <img className='picList' src={github} alt=''></img>
               <img className='picList' src={html} alt=''></img>
               <img className='picList' src={jquery} alt=''></img>
+              <img className='picList' src={MongoDB} alt=''></img>
             </div>
           </div>
         </div>
