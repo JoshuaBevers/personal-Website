@@ -6,8 +6,6 @@ import './App.css';
 //components
 import Home from './components/home';
 import About from './components/about';
-import Resume from './components/resume';
-import inProgress from './components/inprogress';
 import Complete from './components/complete';
 
 //styled
@@ -18,7 +16,7 @@ const Navbar = styled.nav`
   top: 1vh;
   background: black;
   text-align: right;
-  height: 94px;
+  height: 10vh;
   font-size: 25px;
   justify-content: center;
   color: orange;
@@ -33,33 +31,38 @@ const NavButton = styled.button`
   color: orange;
   margin-right: 5px;
   font-size: 15px;
+
+  @media only screen and (max-width: 600px) {
+    padding: 10px 14px;
+  }
+`;
+
+const BG = styled.div`
+  background-color: lightgray;
 `;
 
 function App() {
   return (
-    <Router>
-      <Navbar>
-        <Link to='/completed'>
-          <NavButton>Completed Projects</NavButton>
-        </Link>
-        <Link to='/in-progress'>
-          <NavButton>In Progress</NavButton>
-        </Link>
-        <Link to='/about'>
-          <NavButton>About Me</NavButton>
-        </Link>
-        <Link to='/'>
-          <NavButton>Home</NavButton>
-        </Link>
-      </Navbar>
-      <>
-        {<Route exact path='/' component={Home} />}
-        {<Route exact path='/about' component={About} />}
-        {<Route exact path='/resume' component={Resume} />}
-        {<Route exact path='/in-progress' component={inProgress} />}
-        {<Route exact path='/completed' component={Complete} />}
-      </>
-    </Router>
+    <BG>
+      <Router>
+        <Navbar>
+          <Link to='/'>
+            <NavButton>Home</NavButton>
+          </Link>
+          <Link to='/completed'>
+            <NavButton>Favorite Projects</NavButton>
+          </Link>
+          <Link to='/about'>
+            <NavButton>Favorite Me</NavButton>
+          </Link>
+        </Navbar>
+        <>
+          {<Route exact path='/' component={Home} />}
+          {<Route exact path='/about' component={About} />}
+          {<Route exact path='/completed' component={Complete} />}
+        </>
+      </Router>
+    </BG>
   );
 }
 
