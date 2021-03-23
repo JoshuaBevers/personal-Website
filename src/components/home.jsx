@@ -2,7 +2,6 @@ import React, { useRef } from 'react';
 import { Link } from 'react-router-dom';
 import './home.css';
 import logo from '../logo.svg';
-import styled from 'styled-components';
 
 function Home() {
   useRef(() => {
