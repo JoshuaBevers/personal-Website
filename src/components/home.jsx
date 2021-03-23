@@ -4,8 +4,6 @@ import './home.css';
 import logo from '../logo.svg';
 import styled from 'styled-components';
 
-const skillBar = styled.div``;
-
 function Home() {
   useRef(() => {
     document.title = 'Home';
