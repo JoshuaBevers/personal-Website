@@ -92,12 +92,12 @@ const TechStack = styled.div`
 
 const LittleIMGs = styled.img`
   margin-top: 2vh;
-  height: 10vh;
-  width: 8vw;
+  height: 7vh;
+  width: 4vw;
   flex-direction: row;
   @media (max-width: 768px) {
-    height: 10vh;
-    width: 20vw;
+    height: 6vh;
+    width: 16vw;
   }
 `;
 
