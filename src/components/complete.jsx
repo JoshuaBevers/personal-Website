@@ -108,7 +108,7 @@ function Complete() {
 
   return (
     <Completed>
-      <Title>Completed Projects</Title>
+      <Title>Favorite Projects</Title>
       <DisplayBlack>
         <IMGAndTitle>
           <IMG src={Drinkcast} alt={Placeholder}></IMG>
