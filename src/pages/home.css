@@ -1,0 +1,69 @@
+.homeHeader {
+  background-color: black;
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  font-size: calc(40px + 2vmin);
+  color: white;
+  margin-top: -30px;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 5s linear;
+  position: absolute;
+  width: 40px;
+  height: 60px;
+  margin-left: 0px;
+  margin-bottom: 56px;
+}
+
+.smallHeader {
+  margin-bottom: -20px;
+  align-items: left;
+  font-size: 15px;
+  color: rgb(255, 174, 0);
+}
+
+.openingButton {
+  background-color: transparent;
+  border: transparent;
+  margin-top: -90px;
+  color: white;
+  font-size: 15px;
+  margin-right: 60px;
+  margin-left: 50px;
+}
+
+.openingButton:hover {
+  transition: all 0.1s linear;
+  border: 1px solid #e1a87a;
+  color: red;
+}
+
+.openingButton:hover {
+  color: red;
+}
+
+@media screen and (max-width: 600px) {
+  .App-logo {
+    animation: App-logo-spin infinite 5s linear;
+    position: absolute;
+    margin-left: 0px;
+    margin-top: -20px;
+  }
+
+  .name {
+    font-size: 0.7em;
+  }
+
+  .smallHeader {
+    margin-top: -20px;
+    padding: 10vw;
+  }
+
+  .openingButton {
+    margin: 30px;
+  }
+}

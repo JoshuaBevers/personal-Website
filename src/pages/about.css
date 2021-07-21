@@ -1,0 +1,59 @@
+:root {
+  --clr-grey-1: coral;
+  --clr-grey-2: coral;
+  --clr-grey-3: coral;
+  --clr-grey-4: coral;
+}
+
+.aboutme {
+  display: grid;
+  flex-direction: row;
+}
+
+.banner {
+  display: flex;
+  background: rgb(121, 94, 9);
+  background: linear-gradient(
+    90deg,
+    rgba(121, 94, 9, 0) 0%,
+    rgba(2, 0, 36, 0.39119397759103647) 11%,
+    rgba(0, 0, 0, 1) 100%
+  );
+}
+.banner img {
+  padding: 15px;
+  height: 300px;
+}
+
+.banner-text {
+  align-self: center;
+  margin-left: 10vw;
+  text-transform: capitalize;
+  margin-bottom: 0.75rem;
+}
+
+.title {
+}
+h1:after {
+  content: ' ';
+  display: block;
+  width: 1.5em;
+  height: 0.1em;
+  background-color: #f0860c;
+  border-radius: 10px;
+}
+.undertext {
+}
+
+@media screen and (max-width: 600px) {
+  p {
+    color: white;
+  }
+  .banner {
+    flex-direction: column;
+  }
+  .banner img {
+    width: 100vw;
+    height: 37vw;
+  }
+}

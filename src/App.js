@@ -4,9 +4,10 @@ import styled from 'styled-components';
 import './App.css';
 
 //components
-import Home from './components/home';
-import About from './components/about';
-import Complete from './components/complete';
+import Home from './pages/home';
+import About from './pages/about';
+import Complete from './pages/complete';
+import Resume from './pages/resume';
 
 //styled
 
@@ -16,53 +17,31 @@ const Navbar = styled.nav`
   top: 1vh;
   background: black;
   text-align: right;
-  height: 10vh;
+  padding-bottom: 1vh;
   font-size: 25px;
-  justify-content: center;
-  color: orange;
   flex-wrap: wrap;
-`;
-
-const NavButton = styled.button`
-  transition: all 0.1s linear;
-  border: 1px solid #e1a87a;
-  padding: 13px 26px;
-  background-color: black;
-  color: orange;
-  margin-right: 5px;
-  font-size: 15px;
-
-  @media only screen and (max-width: 600px) {
-    padding: 10px 14px;
-  }
-`;
-
-const BG = styled.div`
-  background-color: lightgray;
 `;
 
 function App() {
   return (
-    <BG>
-      <Router>
-        <Navbar>
-          <Link to='/'>
-            <NavButton>Home</NavButton>
-          </Link>
-          <Link to='/completed'>
-            <NavButton>Favorite Projects</NavButton>
-          </Link>
-          <Link to='/about'>
-            <NavButton>Favorite Me</NavButton>
-          </Link>
-        </Navbar>
-        <>
-          {<Route exact path='/' component={Home} />}
-          {<Route exact path='/about' component={About} />}
-          {<Route exact path='/completed' component={Complete} />}
-        </>
-      </Router>
-    </BG>
+    <Router>
+      <Navbar>
+        <Link to='/'>
+          <button className='navbutton'>Home</button>
+        </Link>
+        <Link to='/projects'>
+          <button className='navbutton'>Projects</button>
+        </Link>
+        {/* <Link to='/about'>
+          <button className='navbutton'>Me</button>
+        </Link> */}
+      </Navbar>
+
+      {<Route exact path='/' component={Home} />}
+      {<Route exact path='/about' component={About} />}
+      {<Route exact path='/projects' component={Complete} />}
+      {<Route exact path='/resume' component={Resume} />}
+    </Router>
   );
 }
 

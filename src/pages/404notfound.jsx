@@ -1,5 +1,5 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 
 //doc import
 
@@ -14,7 +14,7 @@ const PSorry = styled.p`
 
 function notFound() {
   return (
-    <div className="interests">
+    <div className='interests'>
       <PSorry>
         I'm sorry.
         <br /> It appears the page you were looking for was eaten.

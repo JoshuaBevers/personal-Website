@@ -1,0 +1,15 @@
+.card-setting {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 40px;
+  margin-left: 10vw;
+}
+.Card {
+  margin-right: 20px;
+  margin-bottom: 20px;
+  border: 3px solid var(--clr-grey-8);
+  box-shadow: var(--dark-shadow);
+}
+.Card img {
+  height: 20vh;
+}
