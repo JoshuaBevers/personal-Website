@@ -7,7 +7,7 @@ import './App.css';
 import Home from './pages/home';
 import About from './pages/about';
 import Complete from './pages/complete';
-import Resume from './pages/resume';
+// import Resume from './pages/resume';
 
 //styled
 
