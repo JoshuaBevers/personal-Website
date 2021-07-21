@@ -19,9 +19,7 @@ function Tutorials({ projectData }) {
                   className='Card'
                   style={{ width: 300 }}
                   hoverable={true}
-                  cover={
-                    <img alt={name} src={image} style={{ height: '20px' }} />
-                  }
+                  cover={<img alt={name} src={image} />}
                   actions={[
                     <a href={github}>
                       <DiGithubBadge size={25} key='setting' />
