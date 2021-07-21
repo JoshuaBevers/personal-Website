@@ -13,7 +13,7 @@ function About() {
   return (
     <div className='aboutme'>
       <div className='banner'>
-        <img src={ferret} alt='https://i.ibb.co/5FdNzv4/image.png' />
+        <img src={ferret} alt='ferret' />
         <div className='banner-text'>
           <h1 style={{ color: 'orange' }}>
             <span className='title'>Abo</span>
