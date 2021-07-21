@@ -12,7 +12,7 @@ function Tutorials({ projectData }) {
       {projectData.map((project) => {
         const { name, description, image, github, livelink } = project;
         return (
-          <div className='site-card-wrapper'>
+          <div className='site-card-wrapper' key={name}>
             <Row gutter={3}>
               <Col span={3}>
                 <Card
@@ -20,7 +20,7 @@ function Tutorials({ projectData }) {
                   style={{ width: 300 }}
                   hoverable={true}
                   cover={
-                    <img alt={name} src={image} style={{ height: '20px;' }} />
+                    <img alt={name} src={image} style={{ height: '20px' }} />
                   }
                   actions={[
                     <a href={github}>

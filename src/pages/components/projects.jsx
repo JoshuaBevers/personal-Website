@@ -47,7 +47,7 @@ function Projects({ projectData }) {
     return () => {
       clearInterval(slider);
     };
-  }, [index]);
+  }, [data, index]);
 
   return (
     <div className='section-center'>

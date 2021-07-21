@@ -45,16 +45,6 @@ const data = [
     livelink: 'https://dinnermenu-ac2e7.firebaseapp.com/',
   },
   {
-    name: 'Food menu',
-    description:
-      'Tutorial followed for creating a menu for a restaurant. It looks delicious.',
-    title: 'Tech Stack:',
-    image: 'https://i.ibb.co/YWQDMvH/image.png',
-    techStack: ['node', 'react', 'html'],
-    github: 'https://github.com/JoshuaBevers/tabs',
-    livelink: 'https://dinnermenututorial.web.app/',
-  },
-  {
     name: 'Tours',
     description:
       'Tutorial followed for creating a site to display touring locations, prices. Options include dismissing tours and resetting suggestions.',
